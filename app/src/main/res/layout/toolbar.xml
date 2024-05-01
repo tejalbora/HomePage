@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f4f4f4"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="20dp">
+    
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/menu"
+        android:src="@drawable/baseline_menu_24"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="StudyMate"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_marginStart="22dp"
+        android:textColor="#172a36"/>
+
+
+
+</LinearLayout>

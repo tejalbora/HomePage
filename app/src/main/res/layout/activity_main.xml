@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:orientation="vertical">
+
+            <include layout="@layout/toolbar" />
+
+            <LinearLayout
+                android:id="@+id/tasks_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="#BFCFC2FC"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="10dp"
+                    android:text="Upcoming Tasks"
+                    android:textColor="#172a36"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:foregroundGravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:scrollbars="horizontal"
+                    app:reverseLayout="false" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/notes_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="#BF61C8A4"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="10dp"
+                    android:text="Your Notes"
+                    android:textColor="#172a36"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewNotes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:foregroundGravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:scrollbars="horizontal"
+                    app:reverseLayout="false" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/quiz_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="#FFEA7B"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="10dp"
+                    android:text="Take A Quiz"
+                    android:textColor="#172a36"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/cn_quiz"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:layout_margin="10dp"
+                            android:foreground="@drawable/cn_img"
+                            android:onClick="showAlertDialogButtonClicked"
+                            android:padding="10dp"
+                            android:textSize="20sp"
+                            app:cornerRadius="15dp"></Button>
+
+                        <Button
+                            android:id="@+id/oops_quiz"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:layout_margin="10dp"
+                            android:foreground="@drawable/oops_img"
+                            android:onClick="showAlertDialogButtonClicked"
+                            android:padding="10dp"
+                            android:textSize="20sp"></Button>
+
+                        <Button
+                            android:id="@+id/daa_quiz"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:layout_margin="10dp"
+                            android:foreground="@drawable/daa_img"
+                            android:onClick="showAlertDialogButtonClicked"
+                            android:padding="10dp"
+                            android:textSize="20sp"
+                            app:cornerRadius="15dp"></Button>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/learn_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="#BFCFC2FC"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="10dp"
+                    android:text="Learn"
+                    android:textColor="#172a36"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/cn_learn"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:layout_margin="10dp"
+                            android:foreground="@drawable/cn_img"
+                            android:padding="10dp"
+                            android:textSize="20sp"
+
+                            app:cornerRadius="15dp"></Button>
+
+                        <Button
+                            android:id="@+id/dsa_learn"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:layout_margin="10dp"
+                            android:foreground="@drawable/dsa_img"
+                            android:padding="10dp"
+                            android:textSize="20sp"
+                            app:cornerRadius="15dp"></Button>
+
+                        <Button
+                            android:id="@+id/daa_learn"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:layout_margin="10dp"
+                            android:foreground="@drawable/daa_img"
+                            android:padding="10dp"
+                            android:textSize="20sp"
+                            app:cornerRadius="15dp"></Button>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start">
+
+        <include layout="@layout/nav_drawer" />
+
+    </RelativeLayout>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
